@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3dxrtv5rpn3q"]
+
+[ext_resource type="Script" path="res://addons/SwiftInv/Inventory/InventoySlot.gd" id="1_liljr"]
+[ext_resource type="Texture2D" uid="uid://du82fratladvy" path="res://addons/SwiftInv/Demo3D/Selector1.png" id="2_u0ypa"]
+[ext_resource type="Texture2D" uid="uid://cgdowmoa1wfkn" path="res://addons/SwiftInv/Demo3D/Selector2.png" id="3_1c4bb"]
+
+[sub_resource type="Animation" id="Animation_26gr5"]
+resource_name = "base"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Frame:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("2_u0ypa"), ExtResource("3_1c4bb")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b42di"]
+_data = {
+"base": SubResource("Animation_26gr5")
+}
+
+[node name="InventorySlot" type="PanelContainer" node_paths=PackedStringArray("frame", "texture_rect", "amount_label", "timer")]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_liljr")
+frame = NodePath("Frame")
+texture_rect = NodePath("TextureRect")
+amount_label = NodePath("Label")
+timer = NodePath("Timer")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Frame" type="TextureRect" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("2_u0ypa")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_b42di")
+}
+autoplay = "base"
