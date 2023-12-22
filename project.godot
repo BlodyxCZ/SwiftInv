@@ -13,7 +13,7 @@ config_version=5
 config/name="SwiftInv"
 run/main_scene="res://addons/SwiftInv/Demo3D/demo.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://raw/icon.png"
 
 [editor_plugins]
 
