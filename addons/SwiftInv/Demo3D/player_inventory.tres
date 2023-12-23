@@ -1,7 +1,64 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=2 format=3 uid="uid://ba0g4umr48rrc"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=9 format=3 uid="uid://ba0g4umr48rrc"]
 
 [ext_resource type="Script" path="res://addons/SwiftInv/Inventory/Inventory.gd" id="1_4l28n"]
+[ext_resource type="Script" path="res://addons/SwiftInv/Inventory/InventoryItem.gd" id="1_5kdkc"]
+[ext_resource type="Texture2D" uid="uid://woslgkaay15w" path="res://addons/SwiftInv/Demo3D/sword.png" id="2_gwm8o"]
+
+[sub_resource type="Resource" id="Resource_si4js"]
+script = ExtResource("1_5kdkc")
+name = "Sword"
+description = "its a sword"
+price = 100
+texture = ExtResource("2_gwm8o")
+rarity = 1
+type = 3
+amount = 1
+max_stack = 1
+
+[sub_resource type="Resource" id="Resource_lnrsk"]
+script = ExtResource("1_5kdkc")
+name = "Sword"
+description = "its a sword"
+price = 100
+texture = ExtResource("2_gwm8o")
+rarity = 1
+type = 3
+amount = 1
+max_stack = 1
+
+[sub_resource type="Resource" id="Resource_s0hvc"]
+script = ExtResource("1_5kdkc")
+name = "Sword"
+description = "its a sword"
+price = 100
+texture = ExtResource("2_gwm8o")
+rarity = 1
+type = 3
+amount = 1
+max_stack = 1
+
+[sub_resource type="Resource" id="Resource_ldgq5"]
+script = ExtResource("1_5kdkc")
+name = "Sword"
+description = "its a sword"
+price = 100
+texture = ExtResource("2_gwm8o")
+rarity = 1
+type = 3
+amount = 1
+max_stack = 1
+
+[sub_resource type="Resource" id="Resource_qfbqx"]
+script = ExtResource("1_5kdkc")
+name = "Sword"
+description = "its a sword"
+price = 100
+texture = ExtResource("2_gwm8o")
+rarity = 1
+type = 3
+amount = 1
+max_stack = 1
 
 [resource]
 script = ExtResource("1_4l28n")
-items = Array[Resource("res://addons/SwiftInv/Inventory/InventoryItem.gd")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+items = Array[ExtResource("1_5kdkc")]([SubResource("Resource_si4js"), SubResource("Resource_lnrsk"), SubResource("Resource_s0hvc"), SubResource("Resource_ldgq5"), SubResource("Resource_qfbqx"), null, null, null, null, null, null, null, null, null, null, null, null])
