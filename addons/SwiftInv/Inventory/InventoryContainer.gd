@@ -7,12 +7,12 @@ class_name InventoryContainer
 
 @export_category("Node Control")
 ## [color=#9598a0]Container with [InventorySlot]s that can't be selected
-@export var backpack: GridContainer = null
+@export var backpack: GridContainer
 ## [color=#9598a0]Container with [InventorySlot]s that can be selected
-@export var hotbar: GridContainer = null
+@export var hotbar: GridContainer
 ## [color=#9598a0]Panel that pops up when [InventoryItem] in any [InventorySlot] is hovered,
 ## displaying it's info
-@export var info_panel: ItemInfo = null
+@export var info_panel: ItemInfo
 
 @export_category("Properties")
 ## [color=#9598a0]Inventory resource that will be used to store [InventoryItems]

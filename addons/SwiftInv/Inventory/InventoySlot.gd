@@ -11,13 +11,14 @@ var item: InventoryItem = null
 
 @export_category("Node Control")
 ## [color=#9598a0]Frame is visible, if this slot is selected
-@export var frame: Control = null
+@export var frame: Control
 ## [color=#9598a0]Displays [member InventoryItem.texture]
-@export var texture_rect: TextureRect = null
+@export var texture_rect: TextureRect
 ## [color=#9598a0]Displays [member InventoryItem.amount]
-@export var amount_label: Label = null
-## [color=#9598a0]Time required for hovering over [InventorySlot] to show [InventoryInfo]
-@export var timer: Timer = null
+@export var amount_label: Label
+## [color=#9598a0]Time required for hovering over [InventorySlot] to show [InventoryInfo] [br]
+## [member Timer.one_shot] should be True
+@export var timer: Timer
 
 @export_category("Properties")
 ## [color=#9598a0]Size in pixels of drag preview
@@ -65,7 +66,7 @@ func update_slot() -> void:
 
 func _get_drag_data(at_position):
 	if item:
-		set_drag_preview(get_preview())
+		set_drag_preview(_get_preview())
 		var data = {}
 		data["base_slot"] = self
 		data["base_item"] = item
@@ -92,7 +93,7 @@ func _drop_data(at_position, data) -> void:
 	slot_changed.emit()
 
 
-func get_preview() -> Control:
+func _get_preview() -> Control:
 	var preview_texture_rect = TextureRect.new()
 	
 	preview_texture_rect.texture = item.texture

@@ -7,11 +7,11 @@ class_name ItemInfo
 
 @export_category("Node Control")
 ## [color=#9598a0]Displays [member InventoryItem.texture]
-@export var texture_rect: TextureRect = null
+@export var texture_rect: TextureRect
 ## [color=#9598a0]Displays [member InventoryItem.name]
-@export var name_label: Label = null
+@export var name_label: Label
 ## [color=#9598a0]Displays [member InventoryItem.description]
-@export var desc_label: Label = null
+@export var desc_label: Label
 
 
 ## [color=#9598a0]Updates itself and calls [method CanvasItem.show]

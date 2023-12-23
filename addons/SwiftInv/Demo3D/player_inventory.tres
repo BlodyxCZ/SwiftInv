@@ -1,42 +1,7 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=7 format=3 uid="uid://ba0g4umr48rrc"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=2 format=3 uid="uid://ba0g4umr48rrc"]
 
 [ext_resource type="Script" path="res://addons/SwiftInv/Inventory/Inventory.gd" id="1_4l28n"]
-[ext_resource type="Script" path="res://addons/SwiftInv/Inventory/InventoryItem.gd" id="1_c7c26"]
-[ext_resource type="Texture2D" uid="uid://woslgkaay15w" path="res://addons/SwiftInv/Demo3D/sword.png" id="2_bi623"]
-
-[sub_resource type="Resource" id="Resource_srcul"]
-script = ExtResource("1_c7c26")
-name = "Sword"
-description = "its a sword"
-price = 100
-texture = ExtResource("2_bi623")
-rarity = 1
-type = 3
-amount = 2
-max_stack = 1
-
-[sub_resource type="Resource" id="Resource_auteh"]
-script = ExtResource("1_c7c26")
-name = "Sword"
-description = "its a sword"
-price = 100
-texture = ExtResource("2_bi623")
-rarity = 1
-type = 3
-amount = 2
-max_stack = 1
-
-[sub_resource type="Resource" id="Resource_fn2qm"]
-script = ExtResource("1_c7c26")
-name = "Sword"
-description = "its a sword"
-price = 100
-texture = ExtResource("2_bi623")
-rarity = 1
-type = 3
-amount = 2
-max_stack = 1
 
 [resource]
 script = ExtResource("1_4l28n")
-items = Array[ExtResource("1_c7c26")]([SubResource("Resource_srcul"), SubResource("Resource_auteh"), null, SubResource("Resource_fn2qm"), null, null, null, null, null, null, null, null, null, null, null, null, null])
+items = Array[Resource("res://addons/SwiftInv/Inventory/InventoryItem.gd")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
